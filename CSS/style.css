@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+::selection {
+    background-color: #555;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    background-color: #000;
+    color: white;
+}
+main > section {
+    flex: 1;
+}
+.img {
+    max-width: 550px;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.info {
+    padding: 30px 20px;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: crimson;
+    margin-bottom: 15px;
+    font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+}
+p {
+    max-width: 72ch;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+form > div {
+    flex: 1 1 calc((100% / 2) - 20px);
+}
+label {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transition: opacity 1s, color 1s;
+    opacity: 0;
+    font-size: .8rem;
+}
+label:has(+ :focus),
+label:has(+ :not(:placeholder-shown)) {
+    opacity: 1;
+}
+label:has(+ :invalid) {
+    color: crimson;
+}
+input {
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #111;
+    border: 2px solid #222;
+    color: white;
+    border-radius: 8px;
+    transition: border 1s, box-shadow 1s;
+}
+input:focus {
+    outline: none;
+}
+input::placeholder {
+    transition: opacity .5s;
+}
+input:focus::placeholder {
+    opacity: 0;
+}
+input:invalid,
+input:focus:invalid {
+    border: 2px solid crimson;
+    box-shadow: 0 0 10px 2px crimson;
+    color: crimson;
+}
+input:valid,
+input:focus:valid {
+    border: 2px solid white;
+    box-shadow: 0 0 10px 2px white;
+}
+input:placeholder-shown {
+    border: 2px solid #222;
+    box-shadow: none;
+}
+input:required:placeholder-shown:not(:focus) {
+    border: 2px solid #555;
+}
+button {
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 10px 50px;
+    background-color: darkred;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+button:hover {
+    background-color: red;
+}
