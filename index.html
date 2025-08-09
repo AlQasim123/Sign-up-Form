@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up Form</title>
+        <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
         <!-- Google Font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +13,39 @@
         <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-
+        <main>
+            <section class="img"></section>
+            <section class="info">
+                <h1>UCHIHA CLAN</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore sapiente ab deleniti eligendi. Dolores possimus quam repellat iure quis amet cumque laborum, ut fugiat modi tenetur odio quibusdam autem!</p>
+                <form>
+                    <div>
+                        <label for="fName">First Name</label>
+                        <input id="fName" type="text" name="fName" minlength="4" maxlength="20" required placeholder="First Name*">
+                    </div>
+                    <div>
+                        <label for="lName">Last Name</label>
+                        <input id="lName" type="text" name="lName" maxlength="20" placeholder="Last Name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" required placeholder="Email*">
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="text" name="phone" placeholder="Phone Number" inputmode="numeric">
+                    </div>
+                    <div>
+                        <label for="pass">Password</label>
+                        <input id="pass" type="password" name="pass" required minlength="8" maxlength="25" placeholder="Password*">
+                    </div>
+                    <div>
+                        <label for="cPass">Confirm Password</label>
+                        <input id="cPass" type="password" name="cPass" required minlength="8" maxlength="25" placeholder="Confirm Password*">
+                    </div>
+                    <button type="submit">JOIN</button>
+                </form>
+            </section>
+        </main>
     </body>
 </html>
