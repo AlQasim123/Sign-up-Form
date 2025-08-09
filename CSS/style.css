@@ -36,6 +36,7 @@ main > section {
 }
 .info {
     padding: 30px 20px;
+    min-width: 350px;
 }
 h1 {
     font-size: 3rem;
@@ -55,7 +56,7 @@ form {
     gap: 20px;
 }
 form > div {
-    flex: 1 1 calc((100% / 2) - 20px);
+    flex: 1 1 max(350px ,calc((100% / 2) - 20px));
 }
 label {
     display: block;
@@ -113,7 +114,7 @@ input:required:placeholder-shown:not(:focus) {
 }
 button {
     margin: auto;
-    display: block;
+    width: 100%;
     text-align: center;
     padding: 10px 50px;
     background-color: var(--secondary);
