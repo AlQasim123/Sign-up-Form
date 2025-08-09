@@ -1,3 +1,10 @@
+:root {
+  --primary: #dc143c;
+  --secondary: #8b0000;
+  --secondary-two: #fff;
+  --bg-dark: #000;
+  --transition-time: 1s;
+}
 * {
     padding: 0;
     margin: 0;
@@ -14,8 +21,8 @@ main {
     min-height: 100vh;
     display: flex;
     align-items: stretch;
-    background-color: #000;
-    color: white;
+    background-color: var(--bg-dark);
+    color: var(--secondary-two);
 }
 main > section {
     flex: 1;
@@ -25,6 +32,7 @@ main > section {
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
+    background-color: var(--bg-dark);
 }
 .info {
     padding: 30px 20px;
@@ -32,7 +40,7 @@ main > section {
 h1 {
     font-size: 3rem;
     font-weight: 900;
-    color: crimson;
+    color: var(--primary);
     margin-bottom: 15px;
     font-family: "Comfortaa", Arial, Helvetica, sans-serif;
 }
@@ -53,7 +61,7 @@ label {
     display: block;
     text-transform: uppercase;
     margin-bottom: 10px;
-    transition: opacity 1s, color 1s;
+    transition: opacity var(--transition-time), color var(--transition-time);
     opacity: 0;
     font-size: .8rem;
 }
@@ -62,7 +70,7 @@ label:has(+ :not(:placeholder-shown)) {
     opacity: 1;
 }
 label:has(+ :invalid) {
-    color: crimson;
+    color: var(--primary);
 }
 input {
     letter-spacing: 2px;
@@ -72,9 +80,9 @@ input {
     padding: 10px;
     background-color: #111;
     border: 2px solid #222;
-    color: white;
+    color: var(--secondary-two);
     border-radius: 8px;
-    transition: border 1s, box-shadow 1s;
+    transition: border var(--transition-time), box-shadow var(--transition-time);
 }
 input:focus {
     outline: none;
@@ -87,14 +95,14 @@ input:focus::placeholder {
 }
 input:invalid,
 input:focus:invalid {
-    border: 2px solid crimson;
-    box-shadow: 0 0 10px 2px crimson;
-    color: crimson;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 10px 2px var(--primary);
+    color: var(--primary);
 }
 input:valid,
 input:focus:valid {
-    border: 2px solid white;
-    box-shadow: 0 0 10px 2px white;
+    border: 2px solid var(--secondary-two);
+    box-shadow: 0 0 10px 2px var(--secondary-two);
 }
 input:placeholder-shown {
     border: 2px solid #222;
@@ -108,13 +116,13 @@ button {
     display: block;
     text-align: center;
     padding: 10px 50px;
-    background-color: darkred;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--secondary-two);
     font-size: 1.5rem;
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition: background-color 1s;
+    transition: background-color var(--transition-time);
 }
 button:hover {
     background-color: red;
